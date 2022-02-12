@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Default Brush
   m_EditorClassIdentifier: 
   m_Cells:
-  - m_Tile: {fileID: 11400000, guid: ddb2ba58b75624520a1433c60da258a3, type: 2}
+  - m_Tile: {fileID: 11400000, guid: 8f13e7345fa724a869f994a45e0719a7, type: 2}
     m_Matrix:
       e00: 1
       e01: 0
@@ -32,7 +32,7 @@ MonoBehaviour:
       e32: 0
       e33: 1
     m_Color: {r: 1, g: 1, b: 1, a: 1}
-  - m_Tile: {fileID: 11400000, guid: 5b4df8d2441644fa08fb31838c4a0b3f, type: 2}
+  - m_Tile: {fileID: 11400000, guid: 893bab997a7f5457b853d5fbcd81d282, type: 2}
     m_Matrix:
       e00: 1
       e01: 0
@@ -51,7 +51,7 @@ MonoBehaviour:
       e32: 0
       e33: 1
     m_Color: {r: 1, g: 1, b: 1, a: 1}
-  - m_Tile: {fileID: 11400000, guid: d89aa6c4d78f34680a9f781e3a4b6871, type: 2}
+  - m_Tile: {fileID: 11400000, guid: 908fc779ef78b4644bfc0e74c08f1854, type: 2}
     m_Matrix:
       e00: 1
       e01: 0
@@ -70,7 +70,7 @@ MonoBehaviour:
       e32: 0
       e33: 1
     m_Color: {r: 1, g: 1, b: 1, a: 1}
-  - m_Tile: {fileID: 11400000, guid: 1c74671e493904759a37b6d0d5add633, type: 2}
+  - m_Tile: {fileID: 11400000, guid: e4fbbc49355b5450d81c3f99d8752cb1, type: 2}
     m_Matrix:
       e00: 1
       e01: 0
@@ -89,7 +89,7 @@ MonoBehaviour:
       e32: 0
       e33: 1
     m_Color: {r: 1, g: 1, b: 1, a: 1}
-  - m_Tile: {fileID: 11400000, guid: b65423fd49b1749caa74df85df68ecb6, type: 2}
+  - m_Tile: {fileID: 11400000, guid: 5ef38443cb3f946d7891bdfd91e610ae, type: 2}
     m_Matrix:
       e00: 1
       e01: 0
@@ -108,7 +108,7 @@ MonoBehaviour:
       e32: 0
       e33: 1
     m_Color: {r: 1, g: 1, b: 1, a: 1}
-  - m_Tile: {fileID: 11400000, guid: 3d0957d3c4f3245bdafd1c2d017f0365, type: 2}
+  - m_Tile: {fileID: 11400000, guid: f41e658bc7e7a4ee2a9308b7c56c6baf, type: 2}
     m_Matrix:
       e00: 1
       e01: 0
@@ -127,7 +127,7 @@ MonoBehaviour:
       e32: 0
       e33: 1
     m_Color: {r: 1, g: 1, b: 1, a: 1}
-  - m_Tile: {fileID: 11400000, guid: a38c978d5fdc54bdab8e07d77062d23a, type: 2}
+  - m_Tile: {fileID: 11400000, guid: c7cc850db313c4de5ad3647580129b6e, type: 2}
     m_Matrix:
       e00: 1
       e01: 0
@@ -146,7 +146,7 @@ MonoBehaviour:
       e32: 0
       e33: 1
     m_Color: {r: 1, g: 1, b: 1, a: 1}
-  - m_Tile: {fileID: 11400000, guid: 858a95993e15c433cb4e7c3e531072e7, type: 2}
+  - m_Tile: {fileID: 11400000, guid: f76169c8181774cdf9042854be0eb50e, type: 2}
     m_Matrix:
       e00: 1
       e01: 0
@@ -165,7 +165,7 @@ MonoBehaviour:
       e32: 0
       e33: 1
     m_Color: {r: 1, g: 1, b: 1, a: 1}
-  - m_Tile: {fileID: 11400000, guid: 190d5d42789ae475d804c9a026d8cc5f, type: 2}
+  - m_Tile: {fileID: 11400000, guid: d5dc7c97f03cd4960bb0b3007718ba95, type: 2}
     m_Matrix:
       e00: 1
       e01: 0
@@ -184,7 +184,7 @@ MonoBehaviour:
       e32: 0
       e33: 1
     m_Color: {r: 1, g: 1, b: 1, a: 1}
-  - m_Tile: {fileID: 11400000, guid: 8e5630a2e574442bbb75b2822c3077e1, type: 2}
+  - m_Tile: {fileID: 11400000, guid: 5ec71007cd4254b7981bfe0db4c7882b, type: 2}
     m_Matrix:
       e00: 1
       e01: 0
@@ -203,7 +203,7 @@ MonoBehaviour:
       e32: 0
       e33: 1
     m_Color: {r: 1, g: 1, b: 1, a: 1}
-  - m_Tile: {fileID: 11400000, guid: 64123012ea8a148a6b753e028f686885, type: 2}
+  - m_Tile: {fileID: 11400000, guid: e2b712aa96c364d419ade7aea4f20959, type: 2}
     m_Matrix:
       e00: 1
       e01: 0
@@ -222,7 +222,7 @@ MonoBehaviour:
       e32: 0
       e33: 1
     m_Color: {r: 1, g: 1, b: 1, a: 1}
-  - m_Tile: {fileID: 11400000, guid: 40c7eff8e3dd34d819b04acdbe3a73b1, type: 2}
+  - m_Tile: {fileID: 11400000, guid: 3a91f74763e084982b79d99d1befe9b8, type: 2}
     m_Matrix:
       e00: 1
       e01: 0
@@ -241,64 +241,7 @@ MonoBehaviour:
       e32: 0
       e33: 1
     m_Color: {r: 1, g: 1, b: 1, a: 1}
-  - m_Tile: {fileID: 11400000, guid: 3b953db3a01764f8ba9e223c88d14e12, type: 2}
-    m_Matrix:
-      e00: 1
-      e01: 0
-      e02: 0
-      e03: 0
-      e10: 0
-      e11: 1
-      e12: 0
-      e13: 0
-      e20: 0
-      e21: 0
-      e22: 1
-      e23: 0
-      e30: 0
-      e31: 0
-      e32: 0
-      e33: 1
-    m_Color: {r: 1, g: 1, b: 1, a: 1}
-  - m_Tile: {fileID: 11400000, guid: 6776c068cceff4c158a06867e5405724, type: 2}
-    m_Matrix:
-      e00: 1
-      e01: 0
-      e02: 0
-      e03: 0
-      e10: 0
-      e11: 1
-      e12: 0
-      e13: 0
-      e20: 0
-      e21: 0
-      e22: 1
-      e23: 0
-      e30: 0
-      e31: 0
-      e32: 0
-      e33: 1
-    m_Color: {r: 1, g: 1, b: 1, a: 1}
-  - m_Tile: {fileID: 11400000, guid: a17040525d7d24dce81a9f8f67d1a4e2, type: 2}
-    m_Matrix:
-      e00: 1
-      e01: 0
-      e02: 0
-      e03: 0
-      e10: 0
-      e11: 1
-      e12: 0
-      e13: 0
-      e20: 0
-      e21: 0
-      e22: 1
-      e23: 0
-      e30: 0
-      e31: 0
-      e32: 0
-      e33: 1
-    m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Size: {x: 15, y: 1, z: 1}
-  m_Pivot: {x: 14, y: 0, z: 0}
+  m_Size: {x: 4, y: 3, z: 1}
+  m_Pivot: {x: 3, y: 0, z: 0}
   m_CanChangeZPosition: 0
   m_FloodFillContiguousOnly: 1
