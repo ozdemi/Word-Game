@@ -157,6 +157,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ball: {fileID: 6359699360995588056, guid: 6349a68f9f80d4b3ea0e4b0f68a364de, type: 3}
   BallStartPoint: {fileID: 1755342091}
+  BallThrowingEfect: {fileID: 2687754540993856545, guid: d70d763589d41423c841d057edaf08ff, type: 3}
 --- !u!212 &2537538
 SpriteRenderer:
   m_ObjectHideFlags: 0

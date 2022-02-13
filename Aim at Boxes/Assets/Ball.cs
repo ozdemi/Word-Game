@@ -5,6 +5,7 @@ using UnityEngine;
 public class Ball : MonoBehaviour
 {
     float force;
+    public GameObject BallDepletioningEfect;
     void Start()
     {
         force=20;
