@@ -7,6 +7,7 @@ public class Player : MonoBehaviour
     public GameObject ball;
     public GameObject BallStartPoint;
     public ParticleSystem BallThrowingEfect;
+    public AudioSource BallThrowingSound;
     void Start()
     {
         
@@ -18,6 +19,7 @@ public class Player : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Space))
         {
             Instantiate(BallThrowingEfect, BallStartPoint.transform.position, BallStartPoint.transform.rotation);
+            BallThrowingSound.Play();
             GameObject ballObj = Instantiate(ball, BallStartPoint.transform.position, BallStartPoint.transform.rotation);
             Rigidbody2D rg = ballObj.GetComponent<Rigidbody2D>();
             rg.AddForce(new Vector2(2f, 0f) * 10f, ForceMode2D.Impulse);

@@ -6,6 +6,8 @@ public class Ball : MonoBehaviour
 {
     float force;
     public GameObject BallDepletioningEfect;
+    public AudioSource DepletioningSound;
+
     void Start()
     {
         force=20;
@@ -14,7 +16,9 @@ public class Ball : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision) {
         if (collision.gameObject.CompareTag("OtherBoxes")){
                 collision.gameObject.GetComponent<other_boxes>().darbeal(force);
-                Destroy (gameObject);
+                Instantiate(BallDepletioningEfect, collision.gameObject.transform.position, collision.gameObject.transform.rotation);
+                DepletioningSound.Play();
+                Destroy (gameObject,.5f);
                 //GetComponent<CircleCollider2D>().isTrigger = false;
         }
     }
