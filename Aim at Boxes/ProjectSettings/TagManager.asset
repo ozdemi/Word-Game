@@ -9,6 +9,9 @@ TagManager:
   - OtherBoxes
   - FxTemporaire
   - GameManager
+  - Ground
+  - Player1Bomb
+  - Player2Bomb
   layers:
   - Default
   - TransparentFX
