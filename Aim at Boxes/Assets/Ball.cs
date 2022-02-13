@@ -5,20 +5,20 @@ using UnityEngine;
 public class Ball : MonoBehaviour
 {
     float force;
-    public GameObject BallDepletioningEfect;
-    public AudioSource DepletioningSound;
+    GameObject gameManager;
 
     void Start()
     {
         force=20;
+        gameManager=GameObject.FindWithTag("GameManager");
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {
         if (collision.gameObject.CompareTag("OtherBoxes")){
                 collision.gameObject.GetComponent<other_boxes>().darbeal(force);
-                Instantiate(BallDepletioningEfect, collision.gameObject.transform.position, collision.gameObject.transform.rotation);
-                DepletioningSound.Play();
-                Destroy (gameObject,.5f);
+                gameManager.GetComponent<GameManager>().createSoundandEfect(1,collision.gameObject);
+                
+                Destroy (gameObject);
                 //GetComponent<CircleCollider2D>().isTrigger = false;
         }
     }

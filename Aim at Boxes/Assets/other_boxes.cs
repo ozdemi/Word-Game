@@ -11,8 +11,10 @@ public class other_boxes : MonoBehaviour
     public GameObject HealthCanvas;
     public Image healthbar;
 
-
-
+    GameObject gameManager;
+    void Start(){
+       gameManager=GameObject.FindWithTag("GameManager"); 
+    }
     // Update is called once per frame
     void Update()
     {
@@ -24,6 +26,7 @@ public class other_boxes : MonoBehaviour
         healthbar.fillAmount = health / 100 ;
 
         if (health <= 0 ){
+            gameManager.GetComponent<GameManager>().createSoundandEfect(2,gameObject);
             Destroy(gameObject);
         }
         else
