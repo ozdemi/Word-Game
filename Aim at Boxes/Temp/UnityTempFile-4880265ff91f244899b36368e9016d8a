@@ -338,3 +338,4 @@
 /define:UNITY_UNITYADS_API
 /define:USE_SEARCH_ENGINE_API
 "Assets/Player.cs"
+"Assets/other_boxes.cs"
