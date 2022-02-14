@@ -54,10 +54,7 @@ public class ServerManager : MonoBehaviourPunCallbacks
         GameObject obj = PhotonNetwork.Instantiate("PlayerBomb",Vector3.zero,Quaternion.identity,0,null);
         obj.GetComponent<PhotonView>().Owner.NickName = PlayerPrefs.GetString("Username");
 
-        if(PhotonNetwork.PlayerList.Length==1){
-            obj.gameObject.tag="Player1Bomb";
-        }else
-        {
+        if(PhotonNetwork.PlayerList.Length==2){
             obj.gameObject.tag="Player2Bomb";
         }
     }
