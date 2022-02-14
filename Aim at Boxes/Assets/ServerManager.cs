@@ -53,6 +53,13 @@ public class ServerManager : MonoBehaviourPunCallbacks
         InvokeRepeating("checkInfo",0,1f);
         GameObject obj = PhotonNetwork.Instantiate("PlayerBomb",Vector3.zero,Quaternion.identity,0,null);
         obj.GetComponent<PhotonView>().Owner.NickName = PlayerPrefs.GetString("Username");
+
+        if(PhotonNetwork.PlayerList.Length==1){
+            obj.gameObject.tag="Player1Bomb";
+        }else
+        {
+            obj.gameObject.tag="Player2Bomb";
+        }
     }
 
     public override void OnLeftRoom(){

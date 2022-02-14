@@ -35,14 +35,14 @@ public class Player : MonoBehaviour
            PowerBar = GameObject.FindWithTag("Powerbar").GetComponent<Image>();
 
            if(PhotonNetwork.IsMasterClient){
-               gameObject.tag="PlayerBomb1";
+              // gameObject.tag="PlayerBomb1";
                transform.position = GameObject.FindWithTag("CreatingPoint1").transform.position;
                transform.rotation = GameObject.FindWithTag("CreatingPoint1").transform.rotation;
                throwingspin = 2f;
            }
            else
            {
-               gameObject.tag="PlayerBomb2";
+               //gameObject.tag="PlayerBomb2";
                transform.position = GameObject.FindWithTag("CreatingPoint2").transform.position;
                transform.rotation = GameObject.FindWithTag("CreatingPoint2").transform.rotation;
                 throwingspin = -2f;
@@ -100,13 +100,13 @@ public class Player : MonoBehaviour
         if(pw.IsMine){
             if(Input.GetKeyDown(KeyCode.Space))
             {
-            Instantiate(BallThrowingEfect, BallStartPoint.transform.position, BallStartPoint.transform.rotation);
+            
+            PhotonNetwork.Instantiate("Fire_Explosion_efect",BallStartPoint.transform.position,BallStartPoint.transform.rotation,0,null);
             BallThrowingSound.Play();
-            GameObject ballObj = Instantiate(ball, BallStartPoint.transform.position, BallStartPoint.transform.rotation);
-            ballObj.GetComponent<Ball>().ownerPlayer=gameObject.tag;
+            GameObject ballObj = PhotonNetwork.Instantiate("Ball",BallStartPoint.transform.position,BallStartPoint.transform.rotation,0,null);
+            ballObj.GetComponent<PhotonView>().RPC("sendTag",RpcTarget.All,gameObject.tag);
             Rigidbody2D rg = ballObj.GetComponent<Rigidbody2D>();
             rg.AddForce(new Vector2(throwingspin, 0f) * PowerBar.fillAmount * 15f, ForceMode2D.Impulse);
-       
             StopCoroutine(powerLoop);
             }
         }
