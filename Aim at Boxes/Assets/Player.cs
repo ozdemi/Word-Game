@@ -7,15 +7,17 @@ using UnityEngine.UI;
 using Photon.Realtime;
 using Photon.Pun;
 
+
 public class Player : MonoBehaviour
 {
     public GameObject ball;
     public GameObject BallStartPoint;
     public ParticleSystem BallThrowingEfect;
     public AudioSource BallThrowingSound;
+    float throwingspin;
 
     [Header ("Powerbar Setting")]
-    public Image PowerBar;
+     Image PowerBar;
     float powernum;
     bool theend=false;//It means the bar didn't come to the end yet.
     
@@ -29,17 +31,42 @@ public class Player : MonoBehaviour
        
 
        if(pw.IsMine){
-           //GetComponent<PlayerBomb>().enabled = true;
+           
+           PowerBar = GameObject.FindWithTag("Powerbar").GetComponent<Image>();
 
            if(PhotonNetwork.IsMasterClient){
+               gameObject.tag="PlayerBomb1";
                transform.position = GameObject.FindWithTag("CreatingPoint1").transform.position;
+               transform.rotation = GameObject.FindWithTag("CreatingPoint1").transform.rotation;
+               throwingspin = 2f;
            }
            else
            {
+               gameObject.tag="PlayerBomb2";
                transform.position = GameObject.FindWithTag("CreatingPoint2").transform.position;
+               transform.rotation = GameObject.FindWithTag("CreatingPoint2").transform.rotation;
+                throwingspin = -2f;
            }
        }
-       powerLoop = StartCoroutine(PowerBarStart());
+       InvokeRepeating("startGameCheck",0,.5f);
+    }
+
+    public void startGameCheck(){
+        
+        if(PhotonNetwork.PlayerList.Length==2){
+           if(pw.IsMine){
+               
+               powerLoop = StartCoroutine(PowerBarStart());
+            CancelInvoke("startGameCheck");
+               
+           }else
+           {
+               StopAllCoroutines();
+           }
+        
+            
+        }
+        
     }
 
     IEnumerator PowerBarStart(){
@@ -67,19 +94,23 @@ public class Player : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
+   
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Space))
-        {
+        if(pw.IsMine){
+            if(Input.GetKeyDown(KeyCode.Space))
+            {
             Instantiate(BallThrowingEfect, BallStartPoint.transform.position, BallStartPoint.transform.rotation);
             BallThrowingSound.Play();
             GameObject ballObj = Instantiate(ball, BallStartPoint.transform.position, BallStartPoint.transform.rotation);
+            ballObj.GetComponent<Ball>().ownerPlayer=gameObject.tag;
             Rigidbody2D rg = ballObj.GetComponent<Rigidbody2D>();
-            rg.AddForce(new Vector2(2f, 0f) * PowerBar.fillAmount * 15f, ForceMode2D.Impulse);
+            rg.AddForce(new Vector2(throwingspin, 0f) * PowerBar.fillAmount * 15f, ForceMode2D.Impulse);
        
             StopCoroutine(powerLoop);
+            }
         }
+
 
     }
 

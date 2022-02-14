@@ -7,12 +7,13 @@ public class Ball : MonoBehaviour
     float force;
     GameObject gameManager;
     GameObject player;
+    public string ownerPlayer;
 
     void Start()
     {
         force=20;
         gameManager=GameObject.FindWithTag("GameManager");
-        player=GameObject.FindWithTag("Player1Bomb");
+        player=GameObject.FindWithTag(ownerPlayer);
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {
@@ -23,7 +24,7 @@ public class Ball : MonoBehaviour
                 Destroy (gameObject);
                 
         }
-        if (collision.gameObject.CompareTag("Player2Bomb") || collision.gameObject.CompareTag("Player2Bomb")){
+        if (collision.gameObject.CompareTag("Player2") || collision.gameObject.CompareTag("Player2Bomb")){
                 
                 gameManager.GetComponent<GameManager>().createSoundandEfect(1,collision.gameObject);
                 gameManager.GetComponent<GameManager>().hitBoxes(2,force);
@@ -31,7 +32,7 @@ public class Ball : MonoBehaviour
                 Destroy (gameObject);
                 
         }
-        if (collision.gameObject.CompareTag("Player1Bomb") || collision.gameObject.CompareTag("Player1Bomb")){
+        if (collision.gameObject.CompareTag("Player1") || collision.gameObject.CompareTag("Player1Bomb")){
                 
                 gameManager.GetComponent<GameManager>().createSoundandEfect(1,collision.gameObject);
                 gameManager.GetComponent<GameManager>().hitBoxes(1,force);

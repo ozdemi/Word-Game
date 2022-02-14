@@ -134,7 +134,6 @@ MonoBehaviour:
   BallStartPoint: {fileID: 4260685150745704144}
   BallThrowingEfect: {fileID: 2687754540993856545, guid: d70d763589d41423c841d057edaf08ff, type: 3}
   BallThrowingSound: {fileID: 4260685152213822365}
-  PowerBar: {fileID: 0}
 --- !u!60 &4260685152213822367
 PolygonCollider2D:
   m_ObjectHideFlags: 0

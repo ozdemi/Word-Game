@@ -18,6 +18,7 @@ TagManager:
   - PlayerWaiting
   - Username1
   - Username2
+  - Powerbar
   layers:
   - Default
   - TransparentFX
