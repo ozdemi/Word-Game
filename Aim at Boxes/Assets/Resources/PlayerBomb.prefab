@@ -41,7 +41,6 @@ GameObject:
   - component: {fileID: 4260685152213822360}
   - component: {fileID: 4260685152213822361}
   - component: {fileID: 4260685152213822362}
-  - component: {fileID: 4260685152213822366}
   - component: {fileID: 4260685152213822367}
   - component: {fileID: 4260685152213822365}
   - component: {fileID: 6417866505691076984}
@@ -136,27 +135,6 @@ MonoBehaviour:
   BallThrowingEfect: {fileID: 2687754540993856545, guid: d70d763589d41423c841d057edaf08ff, type: 3}
   BallThrowingSound: {fileID: 4260685152213822365}
   PowerBar: {fileID: 0}
---- !u!50 &4260685152213822366
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4260685152213822363}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!60 &4260685152213822367
 PolygonCollider2D:
   m_ObjectHideFlags: 0

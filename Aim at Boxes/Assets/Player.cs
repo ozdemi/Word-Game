@@ -1,8 +1,11 @@
+//using System.Threading.Tasks.Dataflow;
 using System.Threading;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Photon.Realtime;
+using Photon.Pun;
 
 public class Player : MonoBehaviour
 {
@@ -11,14 +14,31 @@ public class Player : MonoBehaviour
     public ParticleSystem BallThrowingEfect;
     public AudioSource BallThrowingSound;
 
+    [Header ("Powerbar Setting")]
     public Image PowerBar;
     float powernum;
     bool theend=false;//It means the bar didn't come to the end yet.
     
     Coroutine powerLoop;
 
+    PhotonView pw;
+
     void Start()
     {
+        pw = GetComponent<PhotonView>();
+       
+
+       if(pw.IsMine){
+           //GetComponent<PlayerBomb>().enabled = true;
+
+           if(PhotonNetwork.IsMasterClient){
+               transform.position = GameObject.FindWithTag("CreatingPoint1").transform.position;
+           }
+           else
+           {
+               transform.position = GameObject.FindWithTag("CreatingPoint2").transform.position;
+           }
+       }
        powerLoop = StartCoroutine(PowerBarStart());
     }
 
