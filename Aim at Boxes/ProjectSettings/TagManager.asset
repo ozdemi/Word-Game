@@ -12,6 +12,12 @@ TagManager:
   - Ground
   - Player1Bomb
   - Player2Bomb
+  - Bullet
+  - CreatingPoint1
+  - CreatingPoint2
+  - PlayerWaiting
+  - Username1
+  - Username2
   layers:
   - Default
   - TransparentFX
